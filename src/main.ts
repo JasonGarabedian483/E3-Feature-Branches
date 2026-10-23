@@ -5,7 +5,28 @@ const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute("aria-label", "A neutral face with a starry background");
+
+const stars = document.createElementNS("http://www.w3.org/2000/svg", "g");
+stars.setAttribute("fill", "#f3cf87");
+stars.setAttribute("stroke", "#302c29");
+stars.setAttribute("stroke-width", "2");
+
+const { width, height } = face.viewBox.baseVal;
+
+for (let i = 0; i < 100; i++) {
+  const star = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "circle",
+  );
+  star.setAttribute("cx", `${Math.random() * width}`);
+  star.setAttribute("cy", `${Math.random() * height}`);
+  star.setAttribute("r", `${Math.random() * 4}`);
+  star.setAttribute("opacity", `${Math.random()}`);
+  stars.append(star);
+}
+
+face.append(stars);
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
