@@ -21,3 +21,7 @@
 ## Criteria
 
 - I want to choose the option that will create the most distinct change of the character.
+
+## Choice
+
+- I chose to go with Branch B adding the mustache and glasses to the man. I chose this one because I felt that it was the one that I was able to make the most distinct change to because I was able to import assets of my own creation rather than trying to generate something out of code. The other two options I feel were also good, just not quite as unique, with my Branch A having little dots behind the man to represent stars, and Branch C having gradient colored eyes and a smiling mouth.
