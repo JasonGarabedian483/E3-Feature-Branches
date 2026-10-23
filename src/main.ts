@@ -1,3 +1,6 @@
+import glassesURL from "./assets/glasses.png?url"; // Drawn by Jason Garabedian in program Paint.net
+import mustacheURL from "./assets/mustache.png?url"; // Drawn by Jason Garabedian in program Paint.net
+
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
@@ -61,6 +64,30 @@ function buildFace() {
   mouth.setAttribute("stroke-width", "4");
   mouth.setAttribute("stroke-linecap", "round");
   face.append(mouth);
+
+  const glassesImage = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  glassesImage.setAttribute("href", glassesURL);
+  glassesImage.setAttribute("x", "-31");
+  glassesImage.setAttribute("y", "7");
+  glassesImage.setAttribute("width", "100");
+  glassesImage.setAttribute("height", "40");
+  glassesImage.setAttribute("transform", "scale(5)");
+  face.append(glassesImage);
+
+  const mustacheImage = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  mustacheImage.setAttribute("href", mustacheURL);
+  mustacheImage.setAttribute("x", "-15.75");
+  mustacheImage.setAttribute("y", "4.25");
+  mustacheImage.setAttribute("width", "50");
+  mustacheImage.setAttribute("height", "20");
+  mustacheImage.setAttribute("transform", "scale(10)");
+  face.append(mustacheImage);
 
   return face;
 }
